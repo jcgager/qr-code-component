@@ -14,14 +14,19 @@
   font-size: 62.5%;
 }
 
-body {
-  margin: 0;
-  background-color: black;
-}
-
 /***************************************************************
   Styles
 ***************************************************************/
+body {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .container {
   background-color: var(--white);
   border-radius: 15px;
@@ -39,10 +44,10 @@ body {
   padding: 0;
 }
 
- .main-page{
+ .main-page{ /*Mobile*/
   background-color: var(--light-grey);
   width: 375px;
-  min-height: 100vh;
+  min-height: 650px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,4 +81,18 @@ p {
 /***************************************************************
   Media Queries
 ***************************************************************/
+@media ( min-width: 800px ) {
 
+  .main-page {  /*Added medium size for laptop screens*/
+    width: 900px;
+    min-height: 100vh;
+  }
+}
+
+@media ( min-width: 1440px ) {
+
+  .main-page {  /*Desktop*/
+    width: 1440px;
+    min-height: 720px;
+  }
+}
