@@ -20,7 +20,7 @@ This was a novice level challenge to create a card shaped item with a QR code ac
 
 ### Screenshot
 
-![](./qr-code-component_desktop.jpg)
+![](.images/qr-code-component_desktop.jpg)
 
 ## My process
 
