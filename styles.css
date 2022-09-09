@@ -93,6 +93,6 @@ p {
 
   .main-page {  /*Desktop*/
     width: 1440px;
-    min-height: 720px;
+    min-height: 800px;
   }
 }
