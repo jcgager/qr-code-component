@@ -3,6 +3,7 @@
 ****************************************************************/
 * {
   box-sizing: border-box;
+  font-family: outfit, sans-serif;
   text-align: center;
 }
 
@@ -20,6 +21,7 @@
 body {
   margin: 0;
   background-color: var(--LtBckColr);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +31,6 @@ body {
 .container {
   background-color: var(--CardBckColr);
   border-radius: 15px;
-  font-family: outfit, sans-serif;
   max-width: 310px;
   padding: 15px;
  }
@@ -68,6 +69,11 @@ p {
   Media Queries
 ***************************************************************/
 
-@media ( min-width: 1440px ) {
-  
+@media ( min-width: 1400px ) {
+  .about-links {
+    font-size: medium;
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+  }
 }
