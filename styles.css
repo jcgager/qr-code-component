@@ -3,14 +3,15 @@
 ****************************************************************/
 * {
   box-sizing: border-box;
+  font-family: outfit, sans-serif;
   text-align: center;
 }
 
 :root {
-  --light-grey: hsl(212, 45%, 89%);
-  --greyish-blue: hsl(220, 15%, 55%);
-  --dark-blue: hsl(218, 44%, 22%);
-  --white: hsl(0, 0%, 100%);
+  --LtBckColr: hsl(212, 45%, 89%);
+  --LtTxtColr: hsl(220, 15%, 55%);
+  --DrkTxtColr: hsl(218, 44%, 22%);
+  --CardBckColr: hsl(0, 0%, 100%);
   font-size: 62.5%;
 }
 
@@ -19,43 +20,29 @@
 ***************************************************************/
 body {
   margin: 0;
-  background-color: black;
+  background-color: var(--LtBckColr);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .container {
-  background-color: var(--white);
+  background-color: var(--CardBckColr);
   border-radius: 15px;
-  font-family: outfit, sans-serif;
-  max-width: 310px;
-  padding: 15px;
+  max-width: 325px;
+  padding: 15px 15px 30px;
  }
 
- .footnote {
+ .about-links {
   display: none;
  }
 
- img, .main-page, .qr-image {
-  margin: 0 auto;
-  padding: 0;
-}
-
- .main-page{ /*Mobile*/
-  background-color: var(--light-grey);
-  width: 375px;
-  min-height: 650px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 img {
   max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
   border-radius: 10px;
 
 }
@@ -65,14 +52,14 @@ img {
   height: 150px;
 }
 
-h2 {
-  color: var(--dark-blue);
+h1 {
+  color: var(--DrkTxtColr);
   font-size: 2.2rem;
   font-weight: 700;
 }
 
 p {
-  color: var(--greyish-blue);
+  color: var(--LtTxtColr);
   font-size: 1.5rem;
   font-weight: 400;
 
@@ -81,18 +68,12 @@ p {
 /***************************************************************
   Media Queries
 ***************************************************************/
-@media ( min-width: 800px ) {
 
-  .main-page {  /*Added medium size for laptop screens*/
-    width: 900px;
-    min-height: 100vh;
-  }
-}
-
-@media ( min-width: 1440px ) {
-
-  .main-page {  /*Desktop*/
-    width: 1440px;
-    min-height: 800px;
+@media ( min-width: 1400px ) {
+  .about-links {
+    font-size: medium;
+    display: block;
+    position: fixed;
+    bottom: 1rem;
   }
 }
